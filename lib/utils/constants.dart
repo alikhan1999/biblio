@@ -2,8 +2,7 @@ import 'package:biblio_bazar/models/book.dart';
 import 'package:biblio_bazar/models/enums/book_category.dart';
 import 'package:biblio_bazar/models/enums/book_condition.dart';
 import 'package:biblio_bazar/models/local_user.dart';
-import 'package:biblio_bazar/utils/repositories/book_repository.dart';
-import 'package:biblio_bazar/utils/repositories/user_repository.dart';
+
 import 'package:flutter/material.dart';
 
 /// Image Paths
