@@ -1,16 +1,18 @@
 import 'package:biblio_bazar/all_utils.dart';
+import 'package:biblio_bazar/application/core/result.dart';
 import 'package:biblio_bazar/common/logger/log.dart';
 import 'package:biblio_bazar/feature/data/models/items_model.dart';
 import 'package:biblio_bazar/feature/di/di.dart';
-import 'package:biblio_bazar/feature/domain/entities/patient/patient_enity.dart';
-import 'package:biblio_bazar/feature/domain/interfaces/items/i_items_repo.dart';
-import 'package:biblio_bazar/feature/domain/usecase/items/items_usecae.dart';
+import 'package:biblio_bazar/feature/domain/entities/post/post_enity.dart';
+import 'package:biblio_bazar/feature/domain/interfaces/post/i_post_repo.dart';
+import 'package:biblio_bazar/feature/domain/usecase/post/post_usecae.dart';
+
 import 'package:biblio_bazar/models/book.dart';
 
 class BookProvider extends ChangeNotifier {
   double total = 0;
   double totalPrice = 0;
-  late IItemRepo itemRepo;
+  late IPostRepo itemRepo;
   double totalDeliveryFee = 0;
   List<Book> allBooks = [];
   List<Book> wishList = [];
@@ -22,7 +24,7 @@ class BookProvider extends ChangeNotifier {
   List<Book> booksInMarketplace = [];
 
   BookProvider() {
-    itemRepo = inject<IItemRepo>();
+    itemRepo = inject<IPostRepo>();
   }
 
   /// To fetch all books and populate in the app
@@ -177,18 +179,20 @@ class BookProvider extends ChangeNotifier {
     return false;
   }
 
-  Future<List<ItemModel>?> getProductItem(ItemsEntity params) async {
-    ProductList productList = ProductList(<ItemModel>[]);
+  Future<List<PostModel>?> getProductItem(PostEntity params , Result<PostList> result) async {
+    PostList productList = PostList(<PostModel>[]);
     GetProductItemUseCase getProductItemUseCase =
         GetProductItemUseCase(itemRepo);
     final response = await getProductItemUseCase(params);
     response.fold((error) {
       d(error);
-      // result.onError(error);
+      result.onError(error);
     }, (response) {
       d(response);
       productList = response;
+
       notifyListeners();
+      result.onSuccess(response);
       return productList.productList;
     });
     return productList.productList;

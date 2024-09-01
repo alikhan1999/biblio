@@ -1,21 +1,23 @@
 import 'package:biblio_bazar/all_utils.dart';
+import 'package:biblio_bazar/application/core/failure/failure.dart';
+import 'package:biblio_bazar/application/core/result.dart';
+import 'package:biblio_bazar/application/network/error_handler/error_handler.dart';
 import 'package:biblio_bazar/feature/data/models/items_model.dart';
-import 'package:biblio_bazar/feature/domain/entities/patient/patient_enity.dart';
+import 'package:biblio_bazar/feature/domain/entities/post/post_enity.dart';
 import 'package:biblio_bazar/providers/book_provider.dart';
 import 'package:biblio_bazar/ui/screens/home/components/book_image.dart';
-import 'package:flutter/scheduler.dart';
 
-class PostListScreen extends StatefulWidget {
+class PostListScreen extends StatefulWidget  {
   static const routeName = '/PostListScreen';
   const PostListScreen({super.key});
   @override
   State<PostListScreen> createState() => _PostListScreenState();
 }
 
-class _PostListScreenState extends State<PostListScreen> {
+class _PostListScreenState extends State<PostListScreen> implements Result<PostList> {
   final ScrollController _scrollController = ScrollController();
 
-  List<ItemModel> _posts = [];
+  List<PostModel> _posts = [];
   int _page = 1;
   final int _limit = 10; // Number of posts to fetch per page
   bool _isLoading = false;
@@ -117,10 +119,10 @@ class _PostListScreenState extends State<PostListScreen> {
     });
 
     try {
-      List<ItemModel> newPosts = await context
+      List<PostModel> newPosts = await context
           .read<BookProvider>()
-          .getProductItem(ItemsEntity(
-          start: _page.toString(), limit: _limit.toString())) ??
+          .getProductItem(PostEntity(
+          start: _page.toString(), limit: _limit.toString()), this) ??
           [];
 
       setState(() {
@@ -137,5 +139,17 @@ class _PostListScreenState extends State<PostListScreen> {
       });
       print('Failed to load posts: $e');
     }
+  }
+
+  @override
+  onError(Failure error) {
+    String serverError = ErrorMessage.fromError(error).message.toString();
+      EasyLoading.showError(serverError);
+
+  }
+
+  @override
+  onSuccess(PostList result) {
+
   }
 }

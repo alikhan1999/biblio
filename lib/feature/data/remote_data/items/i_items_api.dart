@@ -1,8 +1,8 @@
 
 
 import 'package:biblio_bazar/feature/data/models/items_model.dart';
-import 'package:biblio_bazar/feature/domain/entities/patient/patient_enity.dart';
+import 'package:biblio_bazar/feature/domain/entities/post/post_enity.dart';
 
-abstract class IItemsApi {
-  Future<ProductList> getItems(ItemsEntity param);
+abstract class IPostApi {
+  Future<PostList> getItems(PostEntity param);
 }

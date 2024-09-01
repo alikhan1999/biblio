@@ -1,27 +1,27 @@
 
-class ProductList{
-  List<ItemModel>? productList;
-  ProductList(this.productList);
-  ProductList.fromJson(List<dynamic> json) {
+class PostList{
+  List<PostModel>? productList;
+  PostList(this.productList);
+  PostList.fromJson(List<dynamic> json) {
 
-    productList = <ItemModel>[];
+    productList = <PostModel>[];
     for (var v in json) {
-      productList!.add(ItemModel.fromJson(v));
+      productList!.add(PostModel.fromJson(v));
     }
 
   }
 }
 
-class ItemModel {
+class PostModel {
   int? albumId;
   int? id;
   String? title;
   String? url;
   String? thumbnailUrl;
 
-  ItemModel({this.albumId, this.id, this.title, this.url, this.thumbnailUrl});
+  PostModel({this.albumId, this.id, this.title, this.url, this.thumbnailUrl});
 
-  ItemModel.fromJson(Map<String, dynamic> json) {
+  PostModel.fromJson(Map<String, dynamic> json) {
     albumId = json['albumId'];
     id = json['id'];
     title = json['title'];

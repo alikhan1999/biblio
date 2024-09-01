@@ -7,7 +7,7 @@ import 'package:biblio_bazar/ui/screens/forgot_password/forgot_password_screen.d
 import 'package:biblio_bazar/ui/screens/home/home_screen.dart';
 import 'package:biblio_bazar/ui/screens/login/login_screen.dart';
 import 'package:biblio_bazar/ui/screens/orders/orders_screen.dart';
-import 'package:biblio_bazar/ui/screens/product/product_items.dart';
+import 'package:biblio_bazar/ui/screens/post/post_screen.dart';
 import 'package:biblio_bazar/ui/screens/register/register_screen.dart';
 import 'package:biblio_bazar/ui/screens/settings/settings_screen.dart';
 import 'package:biblio_bazar/ui/screens/store_details/store_details_screen.dart';

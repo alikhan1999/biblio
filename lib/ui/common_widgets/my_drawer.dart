@@ -2,7 +2,7 @@ import 'package:biblio_bazar/all_utils.dart';
 import 'package:biblio_bazar/providers/book_provider.dart';
 import 'package:biblio_bazar/ui/screens/login/login_screen.dart';
 import 'package:biblio_bazar/ui/screens/orders/orders_screen.dart';
-import 'package:biblio_bazar/ui/screens/product/product_items.dart';
+import 'package:biblio_bazar/ui/screens/post/post_screen.dart';
 import 'package:biblio_bazar/ui/screens/settings/settings_screen.dart';
 import 'package:biblio_bazar/ui/screens/uploaded_books/uplaoded_books_screen.dart';
 import 'package:biblio_bazar/ui/screens/wish_list/wish_list_screen.dart';
