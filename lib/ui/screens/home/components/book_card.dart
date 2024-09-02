@@ -12,8 +12,7 @@ class BookCard extends StatelessWidget {
   final bool wishButton;
   final bool isShowDetailPage;
 
-   const BookCard(this.book, {Key? key, this.deleteButton = false, this.isShowDetailPage = true,  this.wishButton = false})
-      : super(key: key);
+   const BookCard(this.book, {super.key, this.deleteButton = false, this.isShowDetailPage = true,  this.wishButton = false});
 
 
   @override

@@ -3,7 +3,7 @@ import 'package:biblio_bazar/providers/book_provider.dart';
 import 'package:biblio_bazar/ui/screens/home/components/book_card.dart';
 
 class CheckoutItem extends StatelessWidget {
-  const CheckoutItem({Key? key}) : super(key: key);
+  const CheckoutItem({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -19,7 +19,7 @@ class _PostListScreenState extends State<PostListScreen> implements Result<PostL
 
   List<PostModel> _posts = [];
   int _page = 1;
-  final int _limit = 10; // Number of posts to fetch per page
+  final int _limit = 8; // Number of posts to fetch per page
   bool _isLoading = false;
   bool _hasMore = true;
 
@@ -41,7 +41,7 @@ class _PostListScreenState extends State<PostListScreen> implements Result<PostL
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Posts with Pagination'),
+        title: const Text('Posts'),
       ),
       body: _buildPostList(),
     );

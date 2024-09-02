@@ -33,6 +33,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Scaffold(
       floatingActionButton: MyElevatedButton(
         onTap: () {
+          context.read<BookProvider>().placeOrder();
           Navigator.pop(context);
           EasyLoading.showSuccess('Order Successfully Place');
         },

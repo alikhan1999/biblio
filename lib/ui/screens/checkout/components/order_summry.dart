@@ -3,7 +3,7 @@ import 'package:biblio_bazar/providers/book_provider.dart';
 import 'package:biblio_bazar/ui/common_widgets/text_in_row.dart';
 
 class OrderSummary extends StatelessWidget {
-  const OrderSummary({Key? key}) : super(key: key);
+  const OrderSummary({super.key});
 
   @override
   Widget build(BuildContext context) {

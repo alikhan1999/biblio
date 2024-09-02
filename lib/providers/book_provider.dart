@@ -158,6 +158,13 @@ class BookProvider extends ChangeNotifier {
     }
   }
 
+  void placeOrder(){
+
+    booksOrders.addAll(booksInCart);
+    booksInCart.clear();
+    notifyListeners();
+  }
+
   List<Book> getFavorite() {
     wishList = Prefs.instance.getWishListItems();
     return wishList;

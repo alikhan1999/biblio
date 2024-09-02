@@ -188,7 +188,7 @@ class _AddBookScreenState extends State<AddBookScreen> with WidgetsBindingObserv
   }
 
   void onTapAddBook() async {
-    final currentId=Prefs.instance.user!.email;
+    final currentuser=Prefs.instance.user!;
     // final user =await  userRepository.get(currentId);
     // if (user == null) {
     //   EasyLoading.showError('Session expired');
@@ -218,10 +218,9 @@ class _AddBookScreenState extends State<AddBookScreen> with WidgetsBindingObserv
           "https://i.postimg.cc/CM4Sw3Rj/book-demo-one.jpg",
           hasHardCover,
           descriptionController.text,
-          LocalUser(
-              email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
-          LocalUser(
-              email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+          const LocalUser(
+              email: 'Ahmad@gmail.com', name: 'Ahmad', phone: '+92302323232'),
+          currentuser,
         );
 
         if (!mounted) {

@@ -8,7 +8,7 @@ import 'package:biblio_bazar/ui/screens/store_details/store_details_screen.dart'
 class BookStoreCard extends StatelessWidget {
   final Book book;
 
-  const BookStoreCard({Key? key, required this.book}) : super(key: key);
+  const BookStoreCard({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {

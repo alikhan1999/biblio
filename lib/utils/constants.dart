@@ -37,9 +37,9 @@ void dismissKeyboard(BuildContext context) {
     true,
     "A classic novel of the Jazz Age",
     const LocalUser(
-        email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+        email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
     const LocalUser(
-        email: 'raza@gmail.com', name: 'raza', phone: '+923077373488')),
+        email: 'raza@gmail.com', name: 'raza', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house")),
   Book(
       "2",
       "The Great Gatsby",
@@ -53,9 +53,9 @@ void dismissKeyboard(BuildContext context) {
       true,
       "A classic novel of the Jazz Age",
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488')),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house")),
   Book(
       "3",
       "The Great Gatsby",
@@ -69,9 +69,9 @@ void dismissKeyboard(BuildContext context) {
       true,
       "A classic novel of the Jazz Age",
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488', storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488')),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house")),
   Book(
       "4",
       "The Great Gatsby",
@@ -85,9 +85,9 @@ void dismissKeyboard(BuildContext context) {
       true,
       "A classic novel of the Jazz Age",
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488')),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house")),
   Book(
       "5",
       "The Great Gatsby",
@@ -101,9 +101,28 @@ void dismissKeyboard(BuildContext context) {
       true,
       "A classic novel of the Jazz Age",
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'))];
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house")),
+
+   Book(
+       "6",
+       "Romes",
+       "F. Scotty ",
+       "9780743273565",
+       BookCategory.fantasy,
+       BookCondition.veryGood,
+       "10.99",
+       "2.50",
+       "https://i.postimg.cc/Tw7LSKvP/book-demo-four.jpg",
+       true,
+       "A classic novel of the Jazz Age",
+       const LocalUser(
+           email: 'ahmad@gmail.com', name: 'ahmad', phone: '+92123443545', storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
+       const LocalUser(
+           email: 'khan@gmail.com', name: 'kha', phone: '+923443434')),
+
+ ];
 
  List<Book> booksOfMarketplace= [Book(
     "1",
@@ -118,9 +137,9 @@ void dismissKeyboard(BuildContext context) {
     true,
     "A classic novel of the Jazz Age",
     const LocalUser(
-        email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+        email: 'ali@gmail.com', name: 'ali', phone: '+923077373488',storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
     const LocalUser(
-        email: 'ali@gmail.com', name: 'ali', phone: '+923077373488')),
+        email: 'ali@gmail.com', name: 'ali', phone: '+923077373488', storeAddress: "Anarkali bazr, lahore", storeName: "Book house")),
   Book(
       "2",
       "The Great Gatsby",
@@ -134,7 +153,6 @@ void dismissKeyboard(BuildContext context) {
       true,
       "A classic novel of the Jazz Age",
       const LocalUser(
-          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488'),
+          email: 'ali@gmail.com', name: 'ali', phone: '+923077373488', storeAddress: "Anarkali bazr, lahore", storeName: "Book house"),
       const LocalUser(
-          email: 'Saleem@gmail.com', name: 'Saleem', phone: '+92123456645'))];
-
+          email: 'Saleem@gmail.com', name: 'Saleem', phone: '+92123456645',storeAddress: "Anarkali bazr, lahore", storeName: "Book house"))];
